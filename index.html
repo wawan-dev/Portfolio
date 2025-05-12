@@ -4,373 +4,579 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Erwan Girard</title>
-    <link href="assets/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+    <div id="background-cubes" class="background-cubes"></div>
+    <!-- Header avec menu -->
+    <header class="header">
         <div class="container">
-            <a class="navbar-brand" href="#">Erwan Girard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#veille">Veille technologique</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="#" class="logo">EG</a>
+                </div>
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projets</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Formation</a></li>
+                        <li class="nav__item"><a href="#veille" class="nav__link">Veille</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Fond de cubes animés -->
-    <div class="background-cubes" id="background-cubes"></div>
-
-    <!-- Section Hero -->
-    <section class="hero" id="about">
-        <img src="assets/img/bitmoji_moi.png" alt="Ma photo">
-        <h1>Erwan Girard</h1>
-        <p id="typewriter"></p>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projects">
-        <div class="container">
-          <h2>Mes Projets</h2>
-          <div class="container-box">
-            <div class="box" onclick="openModal('projet1')">Stage1 BTS</div>
-            <div class="box" onclick="openModal('projet2')">Projet PHP</div>
-            <div class="box" onclick="openModal('projet3')">Stage2 BTS</div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Section Compétences -->
-    <section id="skills">
-        <div class="container">
-            <h2>Compétences</h2>
-            <div class="container-box">
-                <div class="box">HTML<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z"></path></svg></div>
-                <div class="box">CSS <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z"></path></svg></div>
-                <div class="box">JavaScript <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"></path></svg></div>
-                <div class="box">SQL <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M20 6c0-2.168-3.663-4-8-4S4 3.832 4 6v2c0 2.168 3.663 4 8 4s8-1.832 8-4V6zm-8 13c-4.337 0-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3c0 2.168-3.663 4-8 4z"></path><path d="M20 10c0 2.168-3.663 4-8 4s-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3z"></path></svg></div>
-                <div class="box">PHP <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M2.15 16.78h1.57a.14.14 0 0 0 .14-.12l.35-1.82h1.22a4.88 4.88 0 0 0 1.51-.2A2.79 2.79 0 0 0 8 14a3.18 3.18 0 0 0 .67-.85 3.43 3.43 0 0 0 .36-1 2.43 2.43 0 0 0-.41-2.16 2.64 2.64 0 0 0-2.09-.78h-3a.16.16 0 0 0-.15.13L2 16.6a.19.19 0 0 0 0 .13.17.17 0 0 0 .15.05zM5 10.62h1a1.45 1.45 0 0 1 1.08.29c.17.18.2.52.11 1a1.81 1.81 0 0 1-.57 1.12 2.17 2.17 0 0 1-1.33.33h-.8zm9.8-.95a2.7 2.7 0 0 0-1.88-.51h-1.19l.33-1.76a.15.15 0 0 0 0-.13.16.16 0 0 0-.11 0h-1.57a.14.14 0 0 0-.14.12l-1.38 7.27a.13.13 0 0 0 0 .12.13.13 0 0 0 .11.06h1.54a.14.14 0 0 0 .14-.13l.77-4.07h1.11c.45 0 .61.1.66.16a.81.81 0 0 1 0 .62l-.61 3.24a.13.13 0 0 0 0 .12.14.14 0 0 0 .11.06h1.56a.16.16 0 0 0 .15-.13l.64-3.4a1.7 1.7 0 0 0-.24-1.64zm4.52-.51h-3.13a.14.14 0 0 0-.15.13l-1.46 7.31a.16.16 0 0 0 0 .13.14.14 0 0 0 .11.05h1.63a.14.14 0 0 0 .15-.12l.37-1.82h1.27a5.28 5.28 0 0 0 1.56-.2 3 3 0 0 0 1.18-.64 3.31 3.31 0 0 0 .7-.85 3.45 3.45 0 0 0 .37-1 2.38 2.38 0 0 0-.42-2.16 2.81 2.81 0 0 0-2.18-.83zm.62 2.77a1.83 1.83 0 0 1-.6 1.12 2.28 2.28 0 0 1-1.37.33h-.8l.54-2.76h1a1.6 1.6 0 0 1 1.13.29c.16.18.16.52.1 1.02z"></path></svg></div>
-                <div class="box">
-                    Laravel
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" style="fill: rgba(255, 255, 255, 1);">
-                        <title>laravel</title>
-                        <path d="M13.143 23.585l10.46-5.97-4.752-2.736-10.453 6.019zM24.084 11.374l-4.757-2.736v5.417l4.758 2.737zM24.559 5.078l-4.756 2.736 4.756 2.736 4.755-2.737zM9.911 18.928l2.76-1.589v-11.934l-4.758 2.738v11.934zM7.437 1.846l-4.756 2.737 4.756 2.737 4.753-2.737zM2.204 5.406v18.452l10.464 6.022v-5.471l-5.472-3.096c-0.018-0.013-0.032-0.027-0.051-0.039-0.014-0.013-0.030-0.023-0.044-0.034l-0.001-0.003c-0.015-0.015-0.028-0.031-0.039-0.049l-0.001-0.001c-0.014-0.013-0.025-0.028-0.035-0.045l-0.001-0.001h-0.003c-0.008-0.015-0.016-0.035-0.024-0.055l-0.001-0.004c-0.007-0.015-0.015-0.032-0.022-0.051l-0.001-0.003c-0.004-0.020-0.008-0.045-0.010-0.070l-0-0.002c-0.003-0.015-0.006-0.033-0.008-0.051l-0-0.001v-12.759l-2.757-1.59zM24.085 23.857v-5.422l-10.464 5.974v5.47zM29.789 14.055v-5.417l-4.756 2.737v5.417z"></path>
-                    </svg>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Erwan Girard</h1>
+                        <p class="hero__subtitle" id="typewriter"></p>
+                        <p class="hero__description">Passionné par le développement web et les nouvelles technologies. Je transforme des idées en solutions numériques concrètes.</p>
+                        <div class="hero__cta">
+                            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                            <a href="#contact" class="btn btn-outline">Me contacter</a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <div class="hero__image-wrapper">
+                            <img src="assets/img/moi.png" alt="Erwan Girard" class="hero__img">
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="box">
-                    C#
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">
-                        <!-- Hexagone -->
-                        <polygon points="32,2 58,16 58,48 32,62 6,48 6,16" fill="white"/>
-                        <!-- Lettre C -->
-                        <path d="M42 20a12 12 0 0 0-22 8 12 12 0 0 0 22 8" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
-                        <!-- Symbole # ajusté -->
-                        <g stroke="black" stroke-width="3" stroke-linecap="round">
-                            <line x1="44" y1="22" x2="54" y2="22"/>
-                            <line x1="44" y1="30" x2="54" y2="30"/>
-                            <line x1="48" y1="18" x2="48" y2="34"/>
-                            <line x1="50" y1="18" x2="50" y2="34"/>
-                        </g>
-                    </svg>
-
-                </div>
-                
-                <div class="box">
-                    .NET8
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">
-                        <circle cx="32" cy="32" r="30" fill="white"/>
-                        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="black" text-anchor="middle" alignment-baseline="middle">.NET</text>
-                    </svg>
-                </div>
-                
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Formation -->
-    <section id="education">
-        <div class="container">
-            <h2>Formation</h2>
-            <div class="container-box">
-                <div class="box2"><p>Je m'appelle Erwan Girard et je suis étudiant en BTS SIO au lycée Chevrollier d'Angers. 
-                    Je suis passionné par l'informatique depuis plusieurs années et je souhaite en faire mon métier.</p>
-                    <br>
-                    <p>Ce que j'aime dans l'informatique est le coté liberté. La liberté de faire ce que l'on souhaite, je peux développer mes idées et les rendrent réalitées.
-                     J'aime résoudre les différents problèmes qui se confronte à moi lorsque je développe.</p>
+        <!-- Projets Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Mes Projets</h2>
+                    <p class="section__subtitle">Découvrez mes réalisations récentes</p>
                 </div>
-                
-                <div class="box" onclick="openModal('BTS')">BTS SIO <img class="img-fluid rounded mb-5" src="assets/img/sio.png" alt="..." /></div>
-            
+                <div class="projects__grid">
+                    <div class="project-card" onclick="openModal('projet1')">
+                        <div class="project-card__image">
+                            <img src="assets/img/asp.jpg" alt="ASP.NET 8">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Stage 1 BTS</h3>
+                            <p class="project-card__description">Application ASP.NET 8 pour la recherche de DUNS d'entreprises</p>
+                            <span class="project-card__link">Voir détails</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" onclick="openModal('projet2')">
+                        <div class="project-card__image">
+                            <img src="assets/img/phplogo.png" alt="PHP">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Gestion des notes de frais</h3>
+                            <p class="project-card__description">Application PHP pour gérer les notes de frais</p>
+                            <span class="project-card__link">Voir détails</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" onclick="openModal('projet3')">
+                        <div class="project-card__image">
+                            <img src="assets/img/asp.jpg" alt="ASP.NET 8">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Stage 2 BTS</h3>
+                            <p class="project-card__description">Projet Visioring en ASP.NET 8 avec affichage dynamique</p>
+                            <span class="project-card__link">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section veille technologique -->
-    <section id="veille">
-        <div class="container">
-            <h2>Veille technologique</h2>
-            <div class="container-box">
-                <div class="box2">
-                    <p>La veille technologique est un processus qui consiste à s’informer de façon régulière et systématique sur les technologies les plus récentes et les plus innovantes dans le cadre de nouveaux projets pour fabriquer ou améliorer un objet. Nous pouvons aussi définir la veille comme la démarche systématique d’acquisition, d’analyse et d’exploitation d’informations utiles pour la prise de décision stratégique dans une entreprise. Le processus de veille technologique doit être capable d’identifier toute innovation scientifique ou technique susceptible de créer des opportunités en termes de ventes, délai, coûts ou encore qualité.</p>
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Compétences</h2>
+                    <p class="section__subtitle">Technologies que je maîtrise</p>
                 </div>
-                
-                <div class="box3"><img class="img-fluid rounded mb-5" src="assets/img/veille2.jpg" alt="..." /></div>
-            
+                <div class="skills__container">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3 class="skill-card__title">HTML</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3 class="skill-card__title">CSS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="skill-card__title">JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="skill-card__title">SQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <h3 class="skill-card__title">PHP</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-laravel"></i>
+                        </div>
+                        <h3 class="skill-card__title">Laravel</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3 class="skill-card__title">C#</h3>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-card__title">.NET 8</h3>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Section Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </section>
+        </section>
 
+        <!-- Formation Section -->
+        <section class="education section" id="education">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Formation</h2>
+                    <p class="section__subtitle">Mon parcours académique</p>
+                </div>
+                <div class="education__wrapper">
+                    <div class="education__content">
+                        <div class="education__text">
+                            <p>Je m'appelle Erwan Girard et je suis étudiant en BTS SIO au lycée Chevrollier d'Angers. 
+                            Je suis passionné par l'informatique depuis plusieurs années et je souhaite en faire mon métier.</p>
+                            <p>Ce que j'aime dans l'informatique est le coté liberté. La liberté de faire ce que l'on souhaite, je peux développer mes idées et les rendre réalités.
+                            J'aime résoudre les différents problèmes qui se confrontent à moi lorsque je développe.</p>
+                        </div>
+                        <div class="education__card" onclick="openModal('BTS')">
+                            <div class="education__card-image">
+                                <img src="assets/img/sio.png" alt="BTS SIO">
+                            </div>
+                            <div class="education__card-content">
+                                <h3 class="education__card-title">BTS SIO</h3>
+                                <p class="education__card-subtitle">Services Informatiques aux Organisations</p>
+                                <span class="education__card-link">En savoir plus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Veille Section -->
+        <section class="veille section" id="veille">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Veille technologique</h2>
+                    <p class="section__subtitle">Rester informé des dernières innovations</p>
+                </div>
+                <div class="veille__wrapper">
+                    <div class="veille__content">
+                        <div class="veille__text">
+                            <p>La veille technologique est un processus qui consiste à s'informer de façon régulière et systématique sur les technologies les plus récentes et les plus innovantes dans le cadre de nouveaux projets pour fabriquer ou améliorer un objet.</p>
+                            <p>Nous pouvons aussi définir la veille comme la démarche systématique d'acquisition, d'analyse et d'exploitation d'informations utiles pour la prise de décision stratégique dans une entreprise. Le processus de veille technologique doit être capable d'identifier toute innovation scientifique ou technique susceptible de créer des opportunités en termes de ventes, délai, coûts ou encore qualité.</p>
+                        </div>
+                        <div class="veille__image">
+                            <img src="assets/img/veille2.jpg" alt="Veille technologique">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Contact</h2>
+                    <p class="section__subtitle">Travaillons ensemble</p>
+                </div>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <div class="contact__info-item">
+                            <div class="contact__info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__info-content">
+                                <h3>Email</h3>
+                                <p>erwangirard49500@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact__info-item">
+                            <div class="contact__info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__info-content">
+                                <h3>Localisation</h3>
+                                <p>Angers / Segré, France</p>
+                            </div>
+                        </div>
+                        <div class="contact__social">
+                            <a href="#" class="contact__social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="contact__social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="contact__social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact__form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nom</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" rows="4" class="form__textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-       
-        <div class="container-box">
-            <div class="box">Email: erwan@example.com</div>
-            <div class="box">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg></div>
-            <div class="box">GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__logo">
+                    <a href="#" class="logo">EG</a>
+                </div>
+                <ul class="footer__links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#education">Formation</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Erwan Girard. Tous droits réservés.</p>
+            </div>
         </div>
-        <br><br>
-        <p>&copy; 2025 Erwan Girard. Tous droits réservés.</p>
     </footer>
 
+    <!-- Modals -->
+    <div id="projet1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Stage 1 Développement ASP.NET 8</h2>
+                <span class="close" onclick="closeModal('projet1')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img class="modal-img" src="assets/img/asp.jpg" alt="Illustration ASP.NET" />
+                <p class="modal-text">
+                    Durant un stage de 6 semaines, j'ai développé une solution en ASP.NET 8.
+                    Cette application permet de rechercher le DUNS des entreprises dans la base Duns & Bradstreet selon les informations fournies par l'utilisateur.
+                    Elle est connectée au CRM de l'entreprise qui m'a accueilli en stage.
+                </p>
+                <div class="modal-section">
+                    <h3>Mon formulaire en .NET 8</h3>
+                    <img class="modal-img" src="assets/img/avant.png" alt="Formulaire ASP.NET" />
+                </div>
+                <div class="modal-section">
+                    <h3>Résultats retournés après la recherche</h3>
+                    <img class="modal-img" src="assets/img/apres (1).png" alt="Résultats sous forme de tableau" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="BTS" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Le BTS SIO</h2>
+                <span class="close" onclick="closeModal('BTS')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img class="modal-img" src="assets/img/sio.png" alt="BTS SIO" />
+                <div class="modal-text">
+                    <p>
+                        Présentation du BTS SIO (services informatiques aux organisations)
+                    </p>
+                    <p>
+                        Le BTS est un diplôme en deux ans post-bac, résolument concret, destiné à une intégration rapide sur le marché du travail. Pour ceux qui le souhaitent, il est possible de continuer ses études un an ou plus.
+                    </p>
+                    <p>
+                        Le BTS SIO apporte des compétences dans le support et la mise à disposition de services informatiques, ainsi qu'en cybersécurité. À la fin du premier semestre, il propose deux options (SISR et SLAM)
+                        qui délivrent chacune une compétence supplémentaire : l'administration des systèmes et des réseaux (SISR) ou la conception et le développement d'applications (SLAM)
+                    </p>
+                </div>
+                <div class="modal-text">
+                    <p>
+                        Le BTS services informatiques aux organisations permet d'exercer dans différentes structures : un service informatique interne à une organisation, une entreprise de services du numérique, une société de conseil en technologies ou encore un éditeur de logiciels informatiques et d'accéder à un certain nombre de métiers recherchés :
+                    </p>
+                    <ul>
+                        <li>Pour l'option SISR (solutions d'infrastructure, systèmes et réseaux) : technicien d'infrastructure, technicien en télécommunications, technicien de maintenance, technicien support et déploiement, technicien systèmes et réseaux, analyste d'études, webmaster…</li>
+                        <li>Pour l'option SLAM (solutions logicielles et applications métiers) : analyste programmeur, chargé d'études informatiques, développeur (web, d'applications informatiques ou mobiles…), technicien d'études informatiques…</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projet2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Projet PHP – Gestion des notes de frais</h2>
+                <span class="close" onclick="closeModal('projet2')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img class="modal-img" src="assets/img/phplogo.png" alt="Logo PHP" />
+                <p class="modal-text">
+                    J'ai réalisé une application de gestion des notes de frais, développée en PHP, avec une base de données MySQL (phpMyAdmin). Cette solution permet de gérer les utilisateurs, les notes, et l'approbation des demandes.
+                </p>
+                <div class="modal-section">
+                    <h3>Connexion utilisateur sécurisée</h3>
+                    <p class="modal-text">
+                        Le projet commence par un système d'authentification, avec vérification des données saisies par l'utilisateur.
+                    </p>
+                    <img class="modal-img" src="assets/img/connexion (1).png" alt="Connexion utilisateur" />
+                </div>
+                <div class="modal-section">
+                    <h3>Page utilisateur - Vue des notes</h3>
+                    <p class="modal-text">
+                        Une fois connecté, l'utilisateur peut consulter, créer ou modifier ses notes de frais via une interface claire.
+                    </p>
+                    <img class="modal-img" src="assets/img/connexion (2).png" alt="Vue des notes de frais" />
+                </div>
+                <div class="modal-section">
+                    <h3>Création et calcul automatique</h3>
+                    <p class="modal-text">
+                        L'utilisateur renseigne les informations nécessaires. Le coût total est calculé automatiquement. Une fonctionnalité de duplication de note permet de gagner du temps.
+                    </p>
+                    <img class="modal-img" src="assets/img/note.png" alt="Création d'une note" />
+                </div>
+                <div class="modal-section">
+                    <h3>Validation par le supérieur</h3>
+                    <p class="modal-text">
+                        Les notes de frais peuvent être approuvées ou refusées par un responsable. Un message personnalisé peut accompagner la réponse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projet3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Stage 2 Développement ASP.NET 8</h2>
+                <span class="close" onclick="closeModal('projet3')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img class="modal-img" src="assets/img/asp.jpg" alt="ASP.NET" />
+                <p class="modal-text">
+                    La première mission concerne le projet "Visioring". Ce dispositif, présent sur tous les sites Hutchinson, repose sur des télévisions permettant d'afficher en boucle un carrousel comprenant la météo et diverses actualités spécifiques à chaque site se trouvant dans SharePoint, l'affichage de la bourse et la pyramide des incidents interne.     
+                </p>
+                <div class="modal-section">
+                    <h3>La slide carrousel Météo</h3>
+                    <p class="modal-text">
+                    La slide météo utilise une API externe, elle est actualisé toutes les heures et le fond s'adapte au conditions météorologique du moment.
+                    </p>
+                    <img class="modal-img" src="assets/img/meteo.png" alt="img meteo" />
+                </div>
+                <div class="modal-section">
+                    <h3>La slide carrousel Actualité</h3>
+                    <p class="modal-text">
+                    La slide des actualité récupère les actualité qui sont stocker dans un dossier Sharepoint et les affiche selon un intervalles de date pour chaque actualité. Il y a une slide par actualité.
+                    </p>
+                    <img class="modal-img" src="assets/img/actu.png" alt="img actu" />
+                </div>
+                <div class="modal-section">
+                    <h3>La slide carrousel bourse</h3>
+                    <p class="modal-text">
+                    La slide de la bourse récupère les données dans une base de donnée que j'ai créé et qui ajoute quotidiennement la valeur de l'action TotalEnergies. Le graphique étant dynamique.
+                    </p>
+                    <img class="modal-img" src="assets/img/bourse.png" alt="img bourse" />
+                </div>
+                <div class="modal-section">
+                    <h3>La slide carrousel Pyramide de Bird</h3>
+                    <p class="modal-text">
+                    La slide de la pyramide de bird, affiche les accidents et incidents dans l'entreprise de façon calendaire. Les données sont récupérer depuis une API interne à l'entreprise.
+                    </p>
+                    <img class="modal-img" src="assets/img/pyramide.png" alt="img pyramide" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = "block";
+    document.addEventListener('DOMContentLoaded', () => {
+        // Typewriter effect
+        var app = document.getElementById('typewriter');
+        if (app) {
+            var typewriter = new Typewriter(app, {
+                loop: true
+            });
+            typewriter.typeString('Développeur Fullstack | Passionné par le code')
+                .pauseFor(2500)
+                .deleteAll()
+                .typeString('Étudiant BTS SIO | Créateur de solutions web')
+                .pauseFor(2500)
+                .deleteAll()
+                .start();
         }
 
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none";
+        // Mobile Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('.nav__list');
+        if (navToggle && navList) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navList.classList.toggle('active');
+            });
         }
 
-        // Ferme si on clique en dehors de la boîte
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navToggle = document.querySelector('.nav-toggle');
+                const navList = document.querySelector('.nav__list');
+                if (navToggle && navList) {
+                    navToggle.classList.remove('active');
+                    navList.classList.remove('active');
+                }
+            });
+        });
+
+        // Génération des cubes en arrière-plan
+        const backgroundCubes = document.getElementById('background-cubes');
+        if (backgroundCubes) {
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            
+            // Supprimer les cubes existants s'il y en a
+            while (backgroundCubes.firstChild) {
+                backgroundCubes.removeChild(backgroundCubes.firstChild);
+            }
+            
+            for (let i = 0; i < 40; i++) {
+                const cube = document.createElement('div');
+                cube.classList.add('cube');
+                cube.style.opacity = 1;
+                
+                // Positions aléatoires
+                const topPosition = Math.random() * screenHeight;
+                const leftPosition = Math.random() * screenWidth;
+                
+                // Tailles aléatoires pour la variété
+                const size = Math.random() * 50 + 30;
+                
+                cube.style.top = `${topPosition}px`;
+                cube.style.left = `${leftPosition}px`;
+                cube.style.width = `${size}px`;
+                cube.style.height = `${size}px`;
+                
+                // Personnalisation de l'animation
+                cube.style.animationDuration = `${Math.random() * 10 + 15}s`;
+                cube.style.animationDelay = `${Math.random() * 5}s`;
+                cube.style.animationTimingFunction = "linear";
+                cube.style.animationIterationCount = "infinite";
+                
+                // Variation des couleurs dans le thème
+                if (Math.random() > 0.5) {
+                    cube.style.backgroundColor = "rgba(67, 97, 238, 0.05)";
+                    cube.style.borderColor = "rgba(67, 97, 238, 0.1)";
+                } else {
+                    cube.style.backgroundColor = "rgba(247, 37, 133, 0.05)";
+                    cube.style.borderColor = "rgba(247, 37, 133, 0.1)";
+                }
+                
+                backgroundCubes.appendChild(cube);
+            }
+        }
+
+        // Modal functions
+        window.openModal = function(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        window.closeModal = function(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
         window.onclick = function(event) {
             const modals = document.querySelectorAll(".modal");
             modals.forEach(modal => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
             });
         };
 
-        var app = document.getElementById('typewriter');
-        var typewriter = new Typewriter(app, {
-            loop: true
+        // Scroll Reveal Animation
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        sections.forEach(section => {
+            observer.observe(section);
         });
-        typewriter.typeString('Développeur Fullstack | Passionné par le code')
-            .pauseFor(2500)
-            .deleteAll()
-            .start();
-        typewriter.typeString('Développeur Fullstack | Passionné par le code')
-            .pauseFor(2500)
-            .deleteAll()
-            .start();
-        // Génération dynamique des cubes dans le fond
-        const backgroundCubes = document.getElementById('background-cubes');
-
-        // Récupérer la largeur et la hauteur de l'écran
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        for (let i = 0; i < 30; i++) {
-            const cube = document.createElement('div');
-            cube.classList.add('cube');
-
-            // Position initiale aléatoire dans les limites de l'écran (en tenant compte de la taille du cube)
-            const topPosition = Math.random() * (screenHeight - 60); // 60px pour la taille du cube
-            const leftPosition = Math.random() * (screenWidth - 60); // 60px pour la taille du cube
-
-            cube.style.top = `${topPosition}px`;
-            cube.style.left = `${leftPosition}px`;
-
-            // Durée de l'animation aléatoire entre 10s et 15s
-            cube.style.animationDuration = `${Math.random() * 5 + 10}s`; 
-            cube.style.animationTimingFunction = "linear";
-            cube.style.animationIterationCount = "infinite"; // Animation infinie
-
-            backgroundCubes.appendChild(cube);
-        }
+    });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
-
-
-<div id="projet1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('projet1')">&times;</span>
-      
-      <h2 class="modal-title">Stage 1 Développement ASP.NET 8</h2>
-      <img class="modal-img" src="assets/img/asp.jpg" alt="Illustration ASP.NET" />
-  
-      <p class="modal-text">
-        Durant un stage de 6 semaines, j'ai développé une solution en ASP.NET 8.
-        Cette application permet de rechercher le DUNS des entreprises dans la base Duns & Bradstreet selon les informations fournies par l'utilisateur.
-        Elle est connectée au CRM de l’entreprise qui m’a accueilli en stage.
-      </p>
-  
-      <div class="modal-section">
-        <h3>Mon formulaire en .NET 8</h3>
-        <img class="modal-img" src="assets/img/avant.png" alt="Formulaire ASP.NET" />
-      </div>
-  
-      <div class="modal-section">
-        <h3>Résultats retournés après la recherche</h3>
-        <img class="modal-img" src="assets/img/apres (1).png" alt="Résultats sous forme de tableau" />
-      </div>
-    </div>
-</div>
-
-<div id="BTS" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('BTS')">&times;</span>
-      <h2>Le BTS SIO</h2>
-    
-        <img class="img-fluid rounded mb-5" src="assets/img/sio.png" alt="..." />
-        
-        <div class="modal-text">
-            Présentation du BTS SIO (services informatiques aux organisations)
-
-            Le BTS est un diplôme en deux ans post-bac, résolument concret, destiné à une intégration rapide sur le marché du travail. Pour ceux qui le souhaitent, il est possible de continuer ses études un an ou plus.
-            
-            Le BTS SIO apporte des compétences dans le support et la mise à disposition de services informatiques, ainsi qu’en cybersécurité. À la fin du premier semestre, il propose deux options (SISR et SLAM)
-                qui délivrent chacune une compétence supplémentaire : l’administration des systèmes et des réseaux (SISR) ou la conception et le développement d'applications (SLAM)
-        </div>
-        <div class="modal-text">
-            Le BTS services informatiques aux organisations permet d’exercer dans différentes structures : un service informatique interne à une organisation, une entreprise de services du numérique, une société de conseil en technologies ou encore un éditeur de logiciels informatiques et d’accéder à un certain nombre de métiers recherchés :
-            <br>• Pour l’option SISR (solutions d’infrastructure, systèmes et réseaux) : technicien d’infrastructure, technicien en télécommunications, technicien de maintenance, technicien support et déploiement, technicien systèmes et réseaux, analyste d'études, webmaster…
-            <br>• Pour l’option SLAM (solutions logicielles et applications métiers) : analyste programmeur, chargé d'études informatiques, développeur (web, d'applications informatiques ou mobiles…), technicien d'études informatiques…
-        </div>
-      
-    </div>
-</div>
-  
-<div id="projet2" class="modal">
-<div class="modal-content">
-    <span class="close" onclick="closeModal('projet2')">&times;</span>
-    
-    <h2 class="modal-title">Projet PHP – Gestion des notes de frais</h2>
-    <img class="modal-img" src="assets/img/phplogo.png" alt="Logo PHP" />
-
-    <p class="modal-text">
-        J'ai réalisé une application de gestion des notes de frais, développée en PHP, avec une base de données MySQL (phpMyAdmin). Cette solution permet de gérer les utilisateurs, les notes, et l'approbation des demandes.
-    </p>
-
-    <div class="modal-section">
-        <h3>Connexion utilisateur sécurisée</h3>
-        <p class="modal-text">
-        Le projet commence par un système d'authentification, avec vérification des données saisies par l’utilisateur.
-        </p>
-        <img class="modal-img" src="assets/img/connexion (1).png" alt="Connexion utilisateur" />
-    </div>
-
-    <div class="modal-section">
-        <h3>Page utilisateur - Vue des notes</h3>
-        <p class="modal-text">
-        Une fois connecté, l'utilisateur peut consulter, créer ou modifier ses notes de frais via une interface claire.
-        </p>
-        <img class="modal-img" src="assets/img/connexion (2).png" alt="Vue des notes de frais" />
-    </div>
-
-    <div class="modal-section">
-        <h3>Création et calcul automatique</h3>
-        <p class="modal-text">
-        L'utilisateur renseigne les informations nécessaires. Le coût total est calculé automatiquement. Une fonctionnalité de duplication de note permet de gagner du temps.
-        </p>
-        <img class="modal-img" src="assets/img/note.png" alt="Création d'une note" />
-    </div>
-
-    <div class="modal-section">
-        <h3>Validation par le supérieur</h3>
-        <p class="modal-text">
-        Les notes de frais peuvent être approuvées ou refusées par un responsable. Un message personnalisé peut accompagner la réponse.
-        </p>
-    </div>
-    </div>
-</div>
-  
-<div id="projet3" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('projet3')">&times;</span>
-        <h2 class="modal-title">Stage 2 Développement ASP.NET 8</h2>
-
-    <img class="modal-img" src="assets/img/asp.jpg" />
-
-    <p class="modal-text">
-        La première mission concerne le projet “Visioring”. Ce dispositif, présent sur tous les sites Hutchinson, repose sur des télévisions permettant d’afficher en boucle un carrousel comprenant la météo et diverses actualités spécifiques à chaque site se trouvant dans SharePoint, l'affichage de la bourse et la pyramide des incidents interne.     
-    </p>
-
-    <div class="modal-section">
-        <h3>La slide carrousel Météo</h3>
-        <p class="modal-text">
-        La slide météo utilise une API externe, elle est actualisé toutes les heures et le fond s'adapte au conditions météorologique du moment.
-        </p>
-        <img class="modal-img" src="assets/img/meteo.png" alt="img meteo" />
-    </div>
-
-    <div class="modal-section">
-        <h3>La slide carrousel Actualité</h3>
-        <p class="modal-text">
-        La slide des actualité récupère les actualité qui sont stocker dans un dossier Sharepoint et les affiche selon un intervalles de date pour chaque actualité. Il y a une slide par actualité.
-        </p>
-        <img class="modal-img" src="assets/img/actu.png" alt="img actu" />
-    </div>
-
-    <div class="modal-section">
-        <h3>La slide carrousel bourse</h3>
-        <p class="modal-text">
-        La slide de la bourse récupère les données dans une base de donnée que j'ai créé et qui ajoute quotidiennement la valeur de l'action TotalEnergies. Le graphique étant dynamique.
-        </p>
-        <img class="modal-img" src="assets/img/bourse.png" alt="img bourse" />
-    </div>
-
-    <div class="modal-section">
-        <h3>La slide carrousel Pyramide de Bird</h3>
-        <p class="modal-text">
-        La slide de la pyramide de bird, affiche les accidents et incidents dans l'entreprise de façon calendaire. Les données sont récupérer depuis une API interne à l'entreprise.
-        </p>
-        <img class="modal-img" src="assets/img/pyramide.png" alt="img pyramide" />
-    </div>
-        
-    </div>
-</div>
-
 </html>
