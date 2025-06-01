@@ -81,6 +81,17 @@
                             <span class="project-card__link">Voir détails</span>
                         </div>
                     </div>
+
+                    <div class="project-card" onclick="openModal('Hack')">
+                        <div class="project-card__image">
+                            <img src="assets/img/img_hack.png" alt="ASP.NET 8">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">hackathon</h3>
+                            <p class="project-card__description">Application ASP.NET 8 pour trouver une entreprise, la noté, commenté, géolocaliser</p>
+                            <span class="project-card__link">Voir détails</span>
+                        </div>
+                    </div>
                     
                     <div class="project-card" onclick="openModal('projet2')">
                         <div class="project-card__image">
@@ -95,7 +106,7 @@
                     
                     <div class="project-card" onclick="openModal('projet3')">
                         <div class="project-card__image">
-                            <img src="assets/img/asp.jpg" alt="ASP.NET 8">
+                            <img src="assets/img/meteo.png" alt="ASP.NET 8">
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">Stage 2 BTS</h3>
@@ -103,11 +114,21 @@
                             <span class="project-card__link">Voir détails</span>
                         </div>
                     </div>
+
+                    <div class="project-card" onclick="openModal('HackInnov')">
+                        <div class="project-card__image">
+                            <img src="assets/img/hackAcceuil.png" alt="Image">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Gestion hackathon Laravel</h3>
+                            <p class="project-card__description">Projet d'une gestion d'hackathon en Laravel</p>
+                            <span class="project-card__link">Voir détails</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section class="skills section" id="skills">
             <div class="container">
                 <div class="section__header">
@@ -245,17 +266,7 @@
                                 <p>Angers / Segré, France</p>
                             </div>
                         </div>
-                        <div class="contact__social">
-                            <a href="#" class="contact__social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="contact__social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="contact__social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
+                        
                     </div>
                     <form id="contact-form" class="contact__form">
                         <div class="form__group">
@@ -292,17 +303,7 @@
                     <li><a href="#veille">Veille</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="footer__social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="footer__social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+                
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2025 Erwan Girard. Tous droits réservés.</p>
@@ -411,6 +412,41 @@
         </div>
     </div>
 
+    <div id="Hack" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Projet PHP – Gestion des notes de frais</h2>
+                <span class="close" onclick="closeModal('Hack')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img class="modal-img" src="assets/img/img_hack.png" alt="Logo PHP" />
+                <p class="modal-text">
+                    J'ai réalisé un site qui permet de faire des recherches dans la base de données de l'État afin d'avoir des informations sur une entreprise. Ces entreprises peuvent être enregistrées en base de données, commentées, notées et géolocalisées afin d'aider les commerciaux dans le contexte de l'hackathon.
+                </p>
+                <div class="modal-section">
+                    <h3>Page de recherche basique</h3>
+                    <img class="modal-img" src="assets/img/recherche.png" />
+                </div>
+                <div class="modal-section">
+                    <h3>Page des résultats pour une recherche</h3>
+                    <img class="modal-img" src="assets/img/ent_res.png" />
+                </div>
+                <div class="modal-section">
+                    <h3>La description d'une fiche d'entreprise</h3>
+                    <img class="modal-img" src="assets/img/ent_des.png" />
+                </div>
+                <div class="modal-section">
+                    <h3>On peut noter une entreprise et la commenter</h3>
+                    <img class="modal-img" src="assets/img/ent_note.png" />
+                </div>
+                <div class="modal-section">
+                    <h3>Pour finir, chaque entreprise dans notre base est géolocalisée sur une carte pour un visuel et une recherche plus efficaces</h3>
+                    <img class="modal-img" src="assets/img/ent_carte.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="projet3" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -453,6 +489,67 @@
             </div>
         </div>
     </div>
+
+    <div id="HackInnov" class="modal">
+        <div class="modal-overlay" onclick="closeModal('HackInnov')"></div>
+      
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2 class="modal-title">Fonctionnalités par lot</h2>
+            <span class="close" onclick="closeModal('HackInnov')">&times;</span>
+          </header>
+      
+          <div class="modal-body">
+            <!-- Lot 1 -->
+            <section class="modal-section">
+              <h3>Lot 1 : Fonctionnalités de base et ergonomie</h3>
+              <img class="modal-img" src="assets/img/hackAcceuil.png" alt="img pyramide" />
+              <ul>
+                <li>Afficher les membres des équipes présentes dans un hackathon.</li>
+                <li>Gérer les messages d’erreur.</li>
+                <li>Vérifier le nombre de places disponibles pour un hackathon.</li>
+                <li>Adapter le visuel du site en fonction des conditions définies.</li>
+              </ul>
+            </section>
+      
+            <!-- Lot 2 -->
+            <section class="modal-section">
+              <h3>Lot 2 : Gestion d’équipe et personnalisation</h3>
+              <img class="modal-img" src="assets/img/Hackmembre.png" alt="img pyramide" />
+              <ul>
+                <li>Ajouter ou supprimer des membres d’une équipe (par le chef d’équipe).</li>
+                <li>Modifier les informations personnelles de l’équipe (nom, email, mot de passe).</li>
+                <li>Sécuriser l’accès à la page « API » (réservée à l’administrateur).</li>
+                <li>Permettre à une équipe de quitter un hackathon.</li>
+                <li>Afficher l’historique des hackathons (passés, en cours, à venir) avec filtres.</li>
+                <img class="modal-img" src="assets/img/HackHistorique.png" alt="img pyramide" />
+                <li>Ajouter des commentaires sur les hackathons.</li>
+                <li>Télécharger les données personnelles conformément au RGPD.</li>
+              </ul>
+            </section>
+      
+            <!-- Lot 3 -->
+            <section class="modal-section">
+              <h3>Lot 3 : Sécurité avancée et statistiques</h3>
+              <img class="modal-img" src="assets/img/HackStat.png" alt="img Stat" />
+              <ul>
+                <li>Double authentification (2FA) avec Google Authenticator (soumise à validation par l’administrateur via une app C#).</li>
+                <li>Visualiser les statistiques et performances du site et des hackathons (graphiques, indicateurs).</li>
+              </ul>
+            </section>
+      
+            <!-- Admin -->
+            <section class="modal-section">
+              <h3>Partie Administrateur</h3>
+              <div class="modal-img"><!-- Ajoute une image ici --></div>
+              <ul>
+                <li>Système de connexion sécurisé.</li>
+                <li>Vue complète des hackathons, équipes et membres.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
